@@ -401,13 +401,6 @@ app.post('/api/send-report', async (req, res) => {
     }
 });
 
-// Create a .env file if it doesn't exist
-if (!fs.existsSync('.env')) {
-    console.log('Creating .env file with default values');
-    fs.writeFileSync('.env', `EMAIL_USER=${DEFAULT_EMAIL}\nEMAIL_PASS=${DEFAULT_PASSWORD}\nPORT=3000\n`);
-    console.log('.env file created. Please update with your actual email credentials.');
-}
-
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`\n${'='.repeat(50)}`);
@@ -419,7 +412,7 @@ app.listen(PORT, () => {
     console.log(`- GET /api/send-test-email?email=your@email.com: Send a test email`);
     console.log(`- POST /api/send-report: Send email report`);
     console.log(`${'='.repeat(50)}`);
-    console.log(`\nIMPORTANT: Set your email credentials in .env file or use the defaults for testing.`);
+    console.log(`\nIMPORTANT: Set your email credentials in Vercel environment variables.`);
     console.log(`For Gmail, you need to generate an "App Password" if 2FA is enabled.`);
     console.log(`${'='.repeat(50)}\n`);
 }); 
