@@ -13,8 +13,8 @@ console.log('- PORT:', process.env.PORT || '3000 (default)');
 
 // IMPORTANT: Email configuration - Replace with your actual email details for testing
 // Will be overridden by .env values if they exist
-const DEFAULT_EMAIL = 'your-email@gmail.com';
-const DEFAULT_PASSWORD = 'your-app-password';
+const DEFAULT_EMAIL = process.env.EMAIL_USER;
+const DEFAULT_PASSWORD = process.env.EMAIL_PASS;
 
 const app = express();
 
