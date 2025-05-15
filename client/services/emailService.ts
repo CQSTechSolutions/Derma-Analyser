@@ -7,7 +7,7 @@ import axios from 'axios';
 // For physical device testing with local server, replace with your computer's IP address
 // e.g. 'http://192.168.1.100:3000' instead of 'localhost'
 // const BACKEND_URL = Platform.OS === 'web' ? 'http://localhost:3000' : 'http://10.0.2.2:3000'; // Android Emulator → localhost
-const BACKEND_URL = 'http://localhost:5000'; // For web testing
+const BACKEND_URL = 'https://dermaanalyserserver-cqstechsolutions.vercel.app'; // For web testing
 
 export interface EmailReportData {
   results: AnalysisResult;

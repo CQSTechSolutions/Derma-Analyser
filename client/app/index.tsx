@@ -213,7 +213,7 @@ export default function Index() {
             const user = await getCurrentUser();
             if (user && user.email) {
               console.log('Sending analysis result to user email:', user.email);
-              const emailResponse = await fetch("http://localhost:5000/api/send-report", {
+              const emailResponse = await fetch("https://dermaanalyserserver-cqstechsolutions.vercel.app/api/send-report", {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
